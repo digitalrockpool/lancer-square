@@ -1,0 +1,231 @@
+/*
+ Theme Name:   Lancer Square
+ Theme URI:    https://www.lancersquare.co.uk/
+ Description:  Custom theme for Lancer Square
+ Author:       Digital Rockpool
+ Author URI:   https://www.digitalrockpool.com/
+ Template:     bricks
+ Version:      1.0
+ Text Domain:  bricks
+*/
+
+/* *** general *** */
+a,
+button,
+input,
+select {
+  outline: 0!important;
+}
+
+h1, h2, h3,
+.rs-parallax-wrap, .slider-number {
+  font-family: 'Gotham Bold', sans-serif!important;
+}
+
+body, h4,
+#location-accordion .accordion-content-wrapper,
+.rs-parallax-wrap, .slider-title {
+  font-family: 'Univers', sans-serif!important;
+}
+
+/* *** main menu *** */
+.login-link:before {
+  background: #bf9369;
+  border-radius: 50%;
+	content: "";
+  position: absolute;
+  left: 8px;
+  top: 32px;
+  height: 10px;
+  width: 10px;
+}
+
+.brxe-nav-menu li.login-link a {
+  color: #bf9369!important;
+}
+
+.login-link:hover {
+  color: #bf9369;
+}
+
+#brx-header.sticky.scrolling > .brxe-section {
+  transition: all 0.5s ease 1.5s;
+}
+
+.logo-cropped,
+.scrolling .logo {
+  opacity: 0;
+  transition: all 0.5s ease 1s;
+}
+
+.scrolling .logo-cropped {
+  opacity: 1;
+  position: absolute;
+  transition: all 0.5s ease 1s;
+}
+
+.scrolling #nav-container {
+  padding-top: 0;
+  transition: all 0.5s ease 1s;
+}
+
+.scrolling #enquire-button {
+  top: 8px;
+  transition: all 0.5s ease 1s;
+}
+
+.bricks-nav-menu-wrapper li a {
+  white-space: nowrap;
+}
+
+@media (max-width: 1279px) {
+  #mobile-menu {
+    display: inline-block!important;
+  }
+
+  .scrolling #mobile-menu {
+    fill:#bf9369;
+    stroke:#bf9369;
+    top: 28px;
+  }
+
+  .scrolling #logo-column {
+    width: 100%;
+  }
+
+  #left-nav,
+  #right-nav {
+    display: none;
+  }
+
+  #menu-main-menu-mobile .login-link:before {
+    left: 20px;
+    top: 40px;
+  }
+}
+
+/* *** hero *** */
+div.scroll-animation div {
+  animation: scrolldown 2s infinite;
+}
+
+@keyframes scrolldown {
+  from {top: -120px;}
+  to {top: 40px;}
+}
+
+/* *** form *** */
+.submit-button-wrapper {
+  align-items: end;
+  width: 50%;
+}
+
+#brxe-nfpfbi .form-group:nth-child(10) {
+  align-items: start;
+}
+
+#brxe-nfpfbi .form-group:nth-child(10) label {
+  text-transform: none;
+}
+
+#brxe-nfpfbi .form-group:nth-child(10) label a {
+  color: #bf9369;
+}
+
+#brxe-nfpfbi .form-group:nth-child(10) label a:hover {
+  color: #fff;
+}
+
+/* *** image carousel *** */
+.brxe-carousel .image {
+  width: 100%;
+}
+
+.brxe-carousel .swiper-button {
+  display: none!important;
+}
+
+.brxe-carousel:hover .swiper-button {
+  display: flex!important;
+}
+  
+.swiper-horizontal+.swiper-pagination-horizontal {
+  background: rgba(0,0,0,.4);
+  justify-content: center;
+	width: 100%;
+}
+
+/* *** image slider *** */
+.slider-dots .splide__pagination {
+  background: rgba(0,0,0,.4);
+  bottom: 0;
+	width: 100%;
+}
+
+.slider-dots .splide__arrow {
+  display: none!important;
+}
+
+.slider-dots:hover .splide__arrow {
+  display: flex!important;
+}
+
+/* *** location accordion - page specific *** */
+#location-accordion ol {
+  max-height: 440px;
+  overflow-y: scroll;
+  padding: 0 0 0.6rem 1.3rem;
+}
+
+#location-accordion ol li {
+  margin: 0 0 1rem 0;
+  padding: 0 0 0 1rem;
+}
+
+/* *** gallery - page specific *** */
+.gallery :where(.brxe-image).overlay:hover::before {
+  background-color: rgba(0, 0, 0, 0.6)!important;
+}
+
+.gallery :where(.brxe-image).overlay::after {
+  color: #fff;
+  content: "VIEW";
+  font-family: "Gotham Bold",sans-serif;
+  font-size: .9rem;
+  left: 50%;
+  letter-spacing: 6px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1.1);
+  z-index: 3;
+  transition: all .2s ease-out;
+  -webkit-backface-visibility: hidden;
+}
+
+.gallery :where(.brxe-image).overlay:hover::after {
+  opacity: 1;
+}
+
+.boxed-video svg.bricks-video-overlay-icon {
+  transition: all .2s ease-out;
+}
+
+.boxed-video svg.bricks-video-overlay-icon:hover {
+  height: 60px!important;
+  width: 60px!important;
+  transition: all .2s ease-in;
+}
+
+.show-map {
+  display: inline-block!important;
+}
+
+#location-accordion li b {
+  color: #6d7073;
+  cursor: pointer;
+}
+
+#location-accordion li.active b {
+  color: #bf9369;
+}
