@@ -315,6 +315,8 @@ div.scroll-animation div {
   border: 1px solid #fff;
   float: right;
   min-width: 240px;
+  position: relative;
+  top: -68px;
 }
 
 .gravity-form-style input[type=submit] {
@@ -350,11 +352,23 @@ div.scroll-animation div {
 }
 
 .gform_wrapper .gform-mandatory {
-  color: #fff;
-  font-family: "Gotham Bold",sans-serif;
-  font-size: .7em;
+  position: relative;
   text-align: left;
+}
+
+.gravity-form-style .gform-mandatory {
+  font-family: "Gotham Bold",sans-serif;
+  color: #fff;
+  font-size: .7rem;
   text-transform: uppercase;
+}
+
+#gravity-form-popup .gform-mandatory {
+  font-family: "Univers",sans-serif;
+  color: red;
+  font-size: .75rem;
+  text-transform: none;
+  top: -24px;
 }
 
 .gform_wrapper .gfield--width-half,
@@ -369,6 +383,18 @@ div.scroll-animation div {
 
 #gravity-form-popup .name_first {
   width: calc(35% - 8px);
+}
+
+.gform_wrapper .gform_confirmation_message {
+  color: #fff;
+  line-height: 1.8;
+}
+
+#gravity-form-popup h2 {
+  font-size: 1.6rem;
+  letter-spacing: 7px;
+  line-height: 1.1;
+  margin-bottom: 3rem;
 }
 
 /* errors */
