@@ -232,29 +232,28 @@ div.scroll-animation div {
 }
 
 /* *** Gravity Forms *** */
-.gravity-form-style .gform_fields,
-.gravity-form-style .ginput_container--name {
+.gform_wrapper .gform_fields,
+.gform_wrapper .ginput_container--name {
   display: flex;
   flex-flow: row wrap;
   gap: 16px;
 }
 
-.gravity-form-style .gfield {
+.gform_wrapper .gfield {
   width: 100%;
 }
 
-.gravity-form-style fieldset {
+.gform_wrapper fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-.gravity-form-style input:not([type=submit]),
-.gravity-form-style input[type=email],
-.gravity-form-style input[type=password],
-.gravity-form-style input[type=text],
-.gravity-form-style select,
-.gravity-form-style textarea {
+#gravity-form-popup input:not([type=submit]),
+#gravity-form-popup input[type=email],
+#gravity-form-popup input[type=text],
+#gravity-form-popup select,
+#gravity-form-popup textarea {
   background: hsla(0,0%,100%,.15);
   border: 1px solid #6d7073;
   color: #fff;
@@ -265,12 +264,29 @@ div.scroll-animation div {
   text-align: left;
 }
 
-.gravity-form-style textarea {
+.gravity-form-style input:not([type=submit]),
+.gravity-form-style input[type=email],
+.gravity-form-style input[type=text] {
+  background: #000;
+  border: none;
+  border-bottom: 2px solid #bf9369;
+  color: #fff;
+  font-family: "Gotham Bold", sans-serif;
+  font-size: .75rem;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  padding: 15px 15px 15px 0;
+  outline: none;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#gravity-form-popup textarea {
   line-height: 1.1!important;
   min-height: 150px;
 }
 
-.gravity-form-style select {
+#gravity-form-popup select {
   content: "";
   background-image: url('https://lancersquare.sandbox/wp-content/themes/lancer-square/lib/img/icon-chevron.svg');
   background-position: right 16px center;
@@ -278,38 +294,56 @@ div.scroll-animation div {
   background-repeat: no-repeat;
 }
 
-.gravity-form-style .gfield--type-consent {
+.gform_wrapper .gfield--type-consent {
   text-align: left;
 }
 
-.gravity-form-style .gfield--type-submit input[type=submit] {
+.gform_wrapper input[type=submit] {
   background-color: black;
-  border: 1px solid #fff;
   color: #fff;
-  float: right;
   font-family: "Gotham Bold", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
-  min-width: 240px;
   padding: 15px 1.5rem;
   text-align: center;
   text-transform: uppercase;
   transition: box-shadow .3s ease-out;
 }
 
-.gravity-form-style .gfield--type-submit input[type=submit]:hover {
+#gravity-form-popup input[type=submit] {
+  border: 1px solid #fff;
+  float: right;
+  min-width: 240px;
+  position: relative;
+  top: -68px;
+}
+
+.gravity-form-style input[type=submit] {
+  border: 1px solid #bf9369;
+  margin-top: 80px;
+  width: 100%;
+}
+
+#gravity-form-popup input[type=submit]:hover {
   box-shadow: 240px 0px 0 0 #ccc inset;
   color: #6d7073;
 }
 
-.gravity-form-style label,
-.gravity-form-style legend,
-.gravity-form-style .gfield--type-consent .gfield_required_text  {
+.gravity-form-style input[type=submit]:hover {
+  box-shadow: 680px 0px 0 0 #bf9369 inset;
+  color: #fff;
+}
+
+.gform_wrapper label,
+.gform_wrapper legend,
+.gform_wrapper .gfield--type-consent .gfield_required_text,
+.gform_wrapper .gfield--type-honeypot   {
   display: none;
 }
 
-.gravity-form-style .gfield--type-consent label {
+.gform_wrapper .gfield--type-consent label {
+  color: #fff;
   display: inline-block;
   font-family: "Gotham Bold",sans-serif;
   font-size: .8rem;
@@ -317,42 +351,113 @@ div.scroll-animation div {
   text-transform: none;
 }
 
-.gravity-form-style .gfield--width-half,
-.gravity-form-style .name_last {
+.gform_wrapper .gform-mandatory {
+  position: relative;
+  text-align: left;
+}
+
+.gravity-form-style .gform-mandatory {
+  font-family: "Gotham Bold",sans-serif;
+  color: #fff;
+  font-size: .7rem;
+  text-transform: uppercase;
+}
+
+#gravity-form-popup .gform-mandatory {
+  font-family: "Univers",sans-serif;
+  color: red;
+  font-size: .75rem;
+  text-transform: none;
+  top: -24px;
+}
+
+.gform_wrapper .gfield--width-half,
+.gravity-form-style .name_first,
+.gform_wrapper .name_last {
   width: calc(50% - 8px);
 }
 
-.gravity-form-style .name_prefix {
+#gravity-form-popup .name_prefix {
   width: calc(15% - 16px);
 }
 
-.gravity-form-style .name_first {
+#gravity-form-popup .name_first {
   width: calc(35% - 8px);
+}
+
+.gravity-form-style h2 {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+#gravity-form-popup h2 {
+  font-size: 1.6rem;
+  letter-spacing: 7px;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+.gform_wrapper .gform_confirmation_message * {
+  color: #fff;
+  font-family: "Gotham Bold",sans-serif;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.gform_wrapper .gform_confirmation_message p {
+  letter-spacing: 2px;
 }
 
 /* errors */
 
-.gravity-form-style .gform_validation_errors,
-.gravity-form-style .gfield_validation_message {
+.gform_wrapper .gform_validation_errors,
+.gform_wrapper .gfield_validation_message {
   display: none;
+}
+
+#gravity-form-popup .gfield_error input,
+#gravity-form-popup .gfield_error input:not([type=submit]),
+#gravity-form-popup .gfield_error input[type=email],
+#gravity-form-popup .gfield_error input[type=text],
+#gravity-form-popup .gfield_error select,
+#gravity-form-popup .gfield_error textarea {
+  border: 1px solid red;
 }
 
 .gravity-form-style .gfield_error input,
 .gravity-form-style .gfield_error input:not([type=submit]),
 .gravity-form-style .gfield_error input[type=email],
-.gravity-form-style .gfield_error input[type=password],
 .gravity-form-style .gfield_error input[type=text],
 .gravity-form-style .gfield_error select,
 .gravity-form-style .gfield_error textarea {
-  border: 1px solid red;
+  border-bottom: 2px solid red;
 }
 
-.gravity-form-style fieldset.gfield--type-consent.gfield_error::after {
-  content: "Please Accept the terms before submitting";
+.gravity-form-style .gfield_error ::placeholder {
+  color: red;
+}
+
+.gform_wrapper fieldset.gfield--type-consent.gfield_error::after {
+  content: "Please accept the terms before submitting";
   color: red;
   font-family: "Gotham Bold",sans-serif;
   font-size: .7rem;
   position: relative;
   text-transform: uppercase;
+}
+
+#gravity-form-popup fieldset.gfield--type-consent.gfield_error::after {
   top: 28px;
+}
+
+.gravity-form-style fieldset.gfield--type-consent.gfield_error::after {
+  top: 48px;
+}
+
+.gform_wrapper.gform_validation_error .gform-mandatory {
+  color: red;
+  margin-top: -24px;
 }
