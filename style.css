@@ -232,29 +232,29 @@ div.scroll-animation div {
 }
 
 /* *** Gravity Forms *** */
-.gravity-form-style .gform_fields,
-.gravity-form-style .ginput_container--name {
+#gravity-form-popup .gform_fields,
+#gravity-form-popup .ginput_container--name {
   display: flex;
   flex-flow: row wrap;
   gap: 16px;
 }
 
-.gravity-form-style .gfield {
+#gravity-form-popup .gfield {
   width: 100%;
 }
 
-.gravity-form-style fieldset {
+#gravity-form-popup fieldset {
   border: none;
   margin: 0;
   padding: 0;
 }
 
-.gravity-form-style input:not([type=submit]),
-.gravity-form-style input[type=email],
-.gravity-form-style input[type=password],
-.gravity-form-style input[type=text],
-.gravity-form-style select,
-.gravity-form-style textarea {
+#gravity-form-popup input:not([type=submit]),
+#gravity-form-popup input[type=email],
+#gravity-form-popup input[type=password],
+#gravity-form-popup input[type=text],
+#gravity-form-popup select,
+#gravity-form-popup textarea {
   background: hsla(0,0%,100%,.15);
   border: 1px solid #6d7073;
   color: #fff;
@@ -265,12 +265,12 @@ div.scroll-animation div {
   text-align: left;
 }
 
-.gravity-form-style textarea {
+#gravity-form-popup textarea {
   line-height: 1.1!important;
   min-height: 150px;
 }
 
-.gravity-form-style select {
+#gravity-form-popup select {
   content: "";
   background-image: url('https://lancersquare.sandbox/wp-content/themes/lancer-square/lib/img/icon-chevron.svg');
   background-position: right 16px center;
@@ -278,11 +278,11 @@ div.scroll-animation div {
   background-repeat: no-repeat;
 }
 
-.gravity-form-style .gfield--type-consent {
+#gravity-form-popup .gfield--type-consent {
   text-align: left;
 }
 
-.gravity-form-style .gfield--type-submit input[type=submit] {
+#gravity-form-popup .gfield--type-submit input[type=submit] {
   background-color: black;
   border: 1px solid #fff;
   color: #fff;
@@ -298,18 +298,19 @@ div.scroll-animation div {
   transition: box-shadow .3s ease-out;
 }
 
-.gravity-form-style .gfield--type-submit input[type=submit]:hover {
+#gravity-form-popup .gfield--type-submit input[type=submit]:hover {
   box-shadow: 240px 0px 0 0 #ccc inset;
   color: #6d7073;
 }
 
-.gravity-form-style label,
-.gravity-form-style legend,
-.gravity-form-style .gfield--type-consent .gfield_required_text  {
+#gravity-form-popup label,
+#gravity-form-popup legend,
+#gravity-form-popup .gfield--type-consent .gfield_required_text,
+#gravity-form-popup .gfield--type-honeypot   {
   display: none;
 }
 
-.gravity-form-style .gfield--type-consent label {
+#gravity-form-popup .gfield--type-consent label {
   display: inline-block;
   font-family: "Gotham Bold",sans-serif;
   font-size: .8rem;
@@ -317,37 +318,37 @@ div.scroll-animation div {
   text-transform: none;
 }
 
-.gravity-form-style .gfield--width-half,
-.gravity-form-style .name_last {
+#gravity-form-popup .gfield--width-half,
+#gravity-form-popup .name_last {
   width: calc(50% - 8px);
 }
 
-.gravity-form-style .name_prefix {
+#gravity-form-popup .name_prefix {
   width: calc(15% - 16px);
 }
 
-.gravity-form-style .name_first {
+#gravity-form-popup .name_first {
   width: calc(35% - 8px);
 }
 
 /* errors */
 
-.gravity-form-style .gform_validation_errors,
-.gravity-form-style .gfield_validation_message {
+#gravity-form-popup .gform_validation_errors,
+#gravity-form-popup .gfield_validation_message {
   display: none;
 }
 
-.gravity-form-style .gfield_error input,
-.gravity-form-style .gfield_error input:not([type=submit]),
-.gravity-form-style .gfield_error input[type=email],
-.gravity-form-style .gfield_error input[type=password],
-.gravity-form-style .gfield_error input[type=text],
-.gravity-form-style .gfield_error select,
-.gravity-form-style .gfield_error textarea {
+#gravity-form-popup .gfield_error input,
+#gravity-form-popup .gfield_error input:not([type=submit]),
+#gravity-form-popup .gfield_error input[type=email],
+#gravity-form-popup .gfield_error input[type=password],
+#gravity-form-popup .gfield_error input[type=text],
+#gravity-form-popup .gfield_error select,
+#gravity-form-popup .gfield_error textarea {
   border: 1px solid red;
 }
 
-.gravity-form-style fieldset.gfield--type-consent.gfield_error::after {
+#gravity-form-popup fieldset.gfield--type-consent.gfield_error::after {
   content: "Please Accept the terms before submitting";
   color: red;
   font-family: "Gotham Bold",sans-serif;
