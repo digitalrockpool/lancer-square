@@ -385,9 +385,12 @@ div.scroll-animation div {
   width: calc(35% - 8px);
 }
 
-.gform_wrapper .gform_confirmation_message {
-  color: #fff;
-  line-height: 1.8;
+.gravity-form-style h2 {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+  text-align: left;
 }
 
 #gravity-form-popup h2 {
@@ -395,6 +398,17 @@ div.scroll-animation div {
   letter-spacing: 7px;
   line-height: 1.1;
   margin-bottom: 3rem;
+}
+
+.gform_wrapper .gform_confirmation_message * {
+  color: #fff;
+  font-family: "Gotham Bold",sans-serif;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.gform_wrapper .gform_confirmation_message p {
+  letter-spacing: 2px;
 }
 
 /* errors */
