@@ -36,6 +36,13 @@ body, h4,
   padding-right: 5px!important;
 }
 
+.privacy-policy .brxe-text li {
+  list-style: circle;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* *** main menu *** */
 .login-link:before {
   background: #bf9369;
@@ -57,29 +64,29 @@ body, h4,
 }
 
 #brx-header.sticky.scrolling > .brxe-section {
-  transition: all 0.5s ease 1.5s;
+  transition: all 0.5s ease 0s;
 }
 
 .logo-cropped,
 .scrolling .logo {
   opacity: 0;
-  transition: all 0.5s ease 1s;
+  transition: all 0.5s ease 0s;
 }
 
 .scrolling .logo-cropped {
   opacity: 1;
   position: absolute;
-  transition: all 0.5s ease 1s;
+  transition: all 0.5s ease 0s;
 }
 
 .scrolling #nav-container {
   padding-top: 0;
-  transition: all 0.5s ease 1s;
+  transition: all 0.5s ease 0s;
 }
 
 .scrolling #enquire-button {
   top: 8px;
-  transition: all 0.5s ease 1s;
+  transition: all 0.5s ease 0s;
 }
 
 .bricks-nav-menu-wrapper li a {

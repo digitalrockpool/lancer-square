@@ -6,6 +6,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		wp_enqueue_style( 'bricks-child', get_stylesheet_uri(), ['bricks-frontend'], filemtime( get_stylesheet_directory() . '/style.css' ) );
     wp_enqueue_script( 'back-to-top', get_stylesheet_directory_uri() . '/lib/js/back-to-top.js', array('jquery'), null, true);
     wp_enqueue_script( 'location-map', get_stylesheet_directory_uri() . '/lib/js/location-map.js', array('jquery'), null, true);
+    wp_enqueue_script( 'splider', get_stylesheet_directory_uri() . '/lib/js/splider.js', array('jquery'), null, true);
 		wp_enqueue_script( 'google-maps', '//maps.googleapis.com/maps/api/js?key=AIzaSyD89Q_d3mJYLvb9K1Rvj1wV61nH3Afg59E&callback=initMap', array(), null, true );
 	}
 } );
